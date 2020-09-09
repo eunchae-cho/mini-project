@@ -3,13 +3,13 @@ package mini.project;
 import mini.project.util.Prompt;
 
 public class PosApp {
-	
+
 	public static void main(String[] args) {
 		TableList tableList = new TableList();
 		Order order = new Order();
 		Menu menu = new Menu();
 		int count = 1;
-		
+
 		loop:
 			while (true) {
 				System.out.println("==================================");
@@ -21,13 +21,13 @@ public class PosApp {
 				System.out.println("원하시는 서비스의 번호를 입력해주세요:)");
 				String command = Prompt.inputString("> ");
 				System.out.println();
-				
+
 				switch (command) {
-					case "0": 
+				case "0": 
 					System.out.println("프로그램을 종료합니다."); 
 					break loop;
-					
-					case "1": 
+
+				case "1": 
 					System.out.println("=================================");
 					System.out.println("              주문                              ");
 					System.out.println("=================================");
@@ -51,6 +51,11 @@ public class PosApp {
 								}
 							}
 							System.out.println("\n메뉴를 등록했습니다.");
+							Object[] str = order.list();
+							Object[] str2 = order.list2();
+							System.out.println(str.toString());
+							System.out.println(str2.toString());
+
 							break;
 						} else if (ask.equals("2")) {
 							System.out.println("\n메뉴를 변경했습니다.");
@@ -68,21 +73,22 @@ public class PosApp {
 						}
 					}
 					break;
-					
-					case "2":
+
+				case "2":
 					System.out.println("=================================");
 					System.out.println("               계산                              ");
 					System.out.println("=================================");
+
 					break;
-					
-					default: 
+
+				default: 
 					System.out.println("잘못 입력하셨습니다. 다시 입력해주세요.");
 				}
 				System.out.println();
 			}
 		Prompt.close();
-		
+
 	}
-	
-	
+
+
 }
