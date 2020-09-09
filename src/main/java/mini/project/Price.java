@@ -1,34 +1,34 @@
 package mini.project;
 
 public class Price {
-	private int dishname;
-	private int sidename;
-	private int beveragename;
-	private int alcoholname;
-	public int getDishname() {
-		return dishname;
+	private int dishName;
+	private int sideName;
+	private int beverageName;
+	private int alcoholName;
+	public int getdishName() {
+		return dishName;
 
 	}
-	public void setDishname(int dishname) {
-		this.dishname = dishname;
+	public void setdishName(int dishName) {
+		this.dishName = dishName;
 	}
-	public int getSidename() {
-		return sidename;
+	public int getsideName() {
+		return sideName;
 	}
-	public void setSidename(int sidename) {
-		this.sidename = sidename;
+	public void setsideName(int sideName) {
+		this.sideName = sideName;
 	}
-	public int getBeveragename() {
-		return beveragename;
+	public int getbeverageName() {
+		return beverageName;
 	}
-	public void setBeveragename(int beveragename) {
-		this.beveragename = beveragename;
+	public void setbeverageName(int beverageName) {
+		this.beverageName = beverageName;
 	}
-	public int getAlcoholname() {
-		return alcoholname;
+	public int getalcoholName() {
+		return alcoholName;
 	}
-	public void setAlcoholname(int alcoholname) {
-		this.alcoholname = alcoholname;
+	public void setalcoholName(int alcoholName) {
+		this.alcoholName = alcoholName;
 	}
 
 
