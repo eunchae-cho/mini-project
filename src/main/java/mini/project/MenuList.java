@@ -1,7 +1,11 @@
 package mini.project;
 
+import java.util.ArrayList;
 
 public class MenuList {
+	
+	Menu menu = new Menu();
+	//ArrayList menuList = new ArrayList();
 	
 	public void menuName() {
 		Menu menu = new Menu();
@@ -16,13 +20,11 @@ public class MenuList {
 		menu.setAlcohol9("소주");
 		menu.setAlcohol10("맥주");
 		menu.setAlcohol11("막걸리");
+		
 	}
-	
-	
 
-	public void menuNum() {
-		Menu menu = new Menu();
-		int value = 0;
+
+	public void menuNum(int value) {
 		switch (value) {
 		case 1: menu.getDish1();break;
 		case 2: menu.getDish2();break;
@@ -35,10 +37,8 @@ public class MenuList {
 		case 9: menu.getAlcohol9();break;
 		case 10: menu.getAlcohol10();break;
 		case 11: menu.getAlcohol11();break;
+		
 		}
-		
-		
-		
 	}
 	
 
@@ -57,5 +57,10 @@ public class MenuList {
 		System.out.println(" 11. 막걸리        4000원");
 		
 		
+	}
+	
+	public static void main(String[] args) {
+		Menu m = new Menu();
+		System.out.println(m.getAlcohol10());
 	}
 }
