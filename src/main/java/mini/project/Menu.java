@@ -2,38 +2,23 @@ package mini.project;
 
 public class Menu {
 	
-	private String dish1 = "바지락 칼국수";
-	private String dish2 = "팥 칼국수";
-	private String dish3 = "들깨 칼국수";
-	private String dish4 = "새알 팥죽";
-	private String side5 = "해물 파전";
-	private String side6 = "왕만두";
-	private String beverage7 = "콜라";
-	private String beverage8 = "사이다";
-	private String alcohol9 = "소주";
-	private String alcohol7 = "맥주";
-	private String alcohol8 = "막걸리";
+	private String dish1;
+	private String dish2;
+	private String dish3;
+	private String dish4;
+	private String side5;
+	private String side6;
+	private String beverage7;
+	private String beverage8;
+	private String alcohol9;
+	private String alcohol10;
+	private String alcohol11;
 	
-	
-	public void menuBoard() {
-		System.out.println("      [ 메 뉴 판 ]      \n");
-		System.out.println(" 1. 바지락 칼국수 8000원");
-		System.out.println(" 2. 팥 칼국수       8000원");
-		System.out.println(" 3. 들깨 칼국수    8000원");
-		System.out.println(" 4. 새알 팥죽      10000원");
-		System.out.println(" 5. 해물 파전      14000원");
-		System.out.println(" 6. 왕만두          5000원");
-		System.out.println(" 7. 콜라             2000원");
-		System.out.println(" 8. 사이다          2000원");
-		System.out.println(" 9. 소주             4000원");
-		System.out.println(" 10. 맥주           4000원");
-		System.out.println(" 11. 막걸리        4000원");
-	}
-	
+	public Menu() {}
 	
 	public String getDish1() {
 		return dish1;
-	}
+	}	
 	public void setDish1(String dish1) {
 		this.dish1 = dish1;
 	}
@@ -85,17 +70,17 @@ public class Menu {
 	public void setAlcohol9(String alcohol9) {
 		this.alcohol9 = alcohol9;
 	}
-	public String getAlcohol7() {
-		return alcohol7;
+	public String getAlcohol10() {
+		return alcohol10;
 	}
-	public void setAlcohol7(String alcohol7) {
-		this.alcohol7 = alcohol7;
+	public void setAlcohol10(String alcohol10) {
+		this.alcohol10 = alcohol10;
 	}
-	public String getAlcohol8() {
-		return alcohol8;
+	public String getAlcohol11() {
+		return alcohol11;
 	}
-	public void setAlcohol8(String alcohol8) {
-		this.alcohol8 = alcohol8;
+	public void setAlcohol11(String alcohol11) {
+		this.alcohol11 = alcohol11;
 	}
 
 

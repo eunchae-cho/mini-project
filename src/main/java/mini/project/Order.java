@@ -8,14 +8,8 @@ public class Order {
 
 	ArrayList<Integer> orderList = new ArrayList<>();
 	ArrayList<Integer> amountList = new ArrayList<>();
-
-//	public Order(ArrayList<Integer> list) {
-//		this.orderList = list;
-//	}
-//	
 	
 	public void addMenu() {
-	
 		orderList.add(Prompt.inputInt(" - 주문 번호: "));
 	}
 	
@@ -25,16 +19,21 @@ public class Order {
 	}
 	
 
-//	public Object[] list() {
-//		System.out.println("[ 주문 목록 ]");
-//		Object[] orders = orderList.toArray();
-//		Object[] amounts = amountList.toArray();
-//		for (Object obj : orders) {
-//			System.out.print(obj+",");
-//			}
-//		return ;
-//		}
-// 	}	
+
+	public void list() {
+		System.out.println("[ 주문 목록 ]");
+		Integer[] orders = (Integer[]) orderList.toArray();
+		Integer[] amounts = (Integer[]) amountList.toArray();
+		for (int value : orders) {
+			switch (value) {
+			
+			}
+			System.out.print(value+",");
+			for (Object value2 : amounts) {
+				System.out.println(value2);
+			}
+		}
+ 	}	
 	
 	
 
