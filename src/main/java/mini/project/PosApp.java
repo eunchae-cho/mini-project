@@ -6,6 +6,8 @@ public class PosApp {
 	
 	public static void main(String[] args) {
 		TableList tableList = new TableList();
+		Order order = new Order();
+		Menu menu = new Menu();
 		int count = 1;
 		
 		loop:
@@ -38,6 +40,16 @@ public class PosApp {
 						System.out.println("------------------------------");
 						String ask = Prompt.inputString("번호를 입력해주세요: ");
 						if (ask.equals("1")) {
+							menu.menuBoard();
+							System.out.println();
+							while (true) {
+								order.addMenu();
+								order.addAmount();
+								String str = Prompt.inputString("계속하시겠습니까?(y/N) ");
+								if (!str.equalsIgnoreCase("y")) {
+									break;
+								}
+							}
 							System.out.println("\n메뉴를 등록했습니다.");
 							break;
 						} else if (ask.equals("2")) {
@@ -45,7 +57,7 @@ public class PosApp {
 							break;
 						} else {
 							if (count == 3) {
-								System.out.println("죄송합니다. 처음으로 돌아갑니다.");
+								System.out.println("처음으로 돌아갑니다.");
 								count = 1;
 								break;
 							} else { 
