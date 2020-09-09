@@ -52,8 +52,6 @@ public class PosApp {
 							}
 							order.list();
 							System.out.println("\n메뉴를 등록했습니다.");
-							Object[] str2 = order.list2();
-							System.out.println(str2.toString());
 
 							break;
 						} else if (ask.equals("2")) {
@@ -77,6 +75,8 @@ public class PosApp {
 					System.out.println("=================================");
 					System.out.println("               계산                              ");
 					System.out.println("=================================");
+
+					order.pay();
 
 					break;
 
