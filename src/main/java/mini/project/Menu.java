@@ -1,7 +1,6 @@
 package mini.project;
 
 public class Menu {
-	//ok
 	private String dish;
 	private String side;
 	private String beverage;
