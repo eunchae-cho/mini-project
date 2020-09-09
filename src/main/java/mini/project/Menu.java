@@ -1,12 +1,13 @@
 package mini.project;
 
 public class Menu {
+	//ok
 	private String dish;
 	private String side;
 	private String beverage;
 	private String alcohol;
-	
-	
+
+
 	public String getDish() {
 		return dish;
 	}
@@ -31,6 +32,6 @@ public class Menu {
 	public void setAlcohol(String alcohol) {
 		this.alcohol = alcohol;
 	}
-	
-	
+
+
 }
