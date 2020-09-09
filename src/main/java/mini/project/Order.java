@@ -19,6 +19,7 @@ public class Order {
 		amountList.add(Prompt.inputInt(" - 수량: "));
 	}
 
+	// 안바꾼거
 	public void list() {
 		System.out.println("[ 주문 목록 ]");
 		Integer[] orders = (Integer[]) orderList.toArray();
