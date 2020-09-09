@@ -7,24 +7,24 @@ public class TableHandler {
 	
 	static final int CAPACITY= 13;
 	static ArrayList<Integer> tableList = new ArrayList<>(CAPACITY);
-	static int size = 0;
-
+	static Scanner sc = new Scanner(System.in);
+	
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
 		
 		System.out.println("==================================");
 		System.out.println("               POS\n");
-		System.out.println("       (1) 주문         (2) 계산 ");
+		System.out.println("       (1) 주문         (2) 결제 ");
 		System.out.println("==================================");
 		System.out.println("원하시는 서비스의 번호를 입력해주세요:)");
 		System.out.print("> ");
-		int choice = sc.nextInt();	
+		int choice = sc.next();
 		System.out.println();
 		if (choice ==  1) {
 			System.out.println("----------------------------------");
 			System.out.println("                           주문 ");
 			System.out.println("----------------------------------");
 			System.out.print(" - 테이블 번호: ");
+			tableList.Prompt.
 			int tableNum = sc.nextInt();
 			tableList.add(tableNum); 
 			System.out.print(" - 고객수: ");
