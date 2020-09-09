@@ -12,12 +12,10 @@ public class Prompt {
 	}
 	
 	public static int inputInt(String value) {
-		System.out.print(value);
 		return Integer.parseInt(inputString(value));
 	}
 	
 	public static Date inputDate(String value) {
-		System.out.print(value);
 		return Date.valueOf(inputString(value));
 	}
 	
