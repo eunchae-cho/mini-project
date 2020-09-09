@@ -11,6 +11,9 @@ public class App {
 	public static void main(String[] args) {
 		System.out.println("만들고 싶은 주제가 생각나지 않아요...");
 		System.out.println("안녕하세요 - 조은채");
+		System.out.println("점심 빨리 먹고 싶습니다...");
+		int a = 100;
+		if (a > 50)
+			System.out.println("a는 50보다 큽니다.");
 	}
-
 }
