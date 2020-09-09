@@ -11,9 +11,9 @@ public class Prompt {
 		return sc.nextLine();
 	}
 	
-	public static int inputInt(int value) {
+	public static int inputInt(String value) {
 		System.out.print(value);
-		return sc.nextInt();
+		return Integer.parseInt(inputString(value));
 	}
 	
 	public static Date inputDate(String value) {
