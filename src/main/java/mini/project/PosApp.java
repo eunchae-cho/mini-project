@@ -7,7 +7,7 @@ public class PosApp {
 	public static void main(String[] args) {
 		TableList tableList = new TableList();
 		Order order = new Order();
-		Menu menu = new Menu();
+		MenuList menuList = new MenuList();
 		int count = 1;
 
 		loop:
@@ -19,7 +19,7 @@ public class PosApp {
 				System.out.println("            (0) 종료                           \n");
 				System.out.println("==================================");
 				System.out.println("원하시는 서비스의 번호를 입력해주세요:)");
-				String command = Prompt.inputString("> ");
+				String command = Prompt.inputString(" > ");
 				System.out.println();
 
 				switch (command) {
@@ -38,22 +38,21 @@ public class PosApp {
 						System.out.println("       무엇을 하시겠습니까?\n       ");
 						System.out.println("  (1) 메뉴 등록     (2) 메뉴 변경    ");
 						System.out.println("------------------------------");
-						String ask = Prompt.inputString("번호를 입력해주세요: ");
+						String ask = Prompt.inputString(" - 번호를 입력해주세요: ");
 						if (ask.equals("1")) {
-							menu.menuBoard();
+							menuList.menuBoard();
 							System.out.println();
 							while (true) {
 								order.addMenu();
 								order.addAmount();
-								String str = Prompt.inputString("계속하시겠습니까?(y/N) ");
+								String str = Prompt.inputString(" - 계속하시겠습니까?(y/N) ");
 								if (!str.equalsIgnoreCase("y")) {
 									break;
 								}
 							}
+							order.list();
 							System.out.println("\n메뉴를 등록했습니다.");
-							Object[] str = order.list();
 							Object[] str2 = order.list2();
-							System.out.println(str.toString());
 							System.out.println(str2.toString());
 
 							break;
