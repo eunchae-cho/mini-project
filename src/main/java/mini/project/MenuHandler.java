@@ -22,22 +22,42 @@ public class MenuHandler {
 				+ "1: 팥 칼국수\n"
 				+ "2: 들깨 칼국수\n"
 				+ "3: 새알팥죽"));
-		String food = null;
+		String mainFood = null;
 		switch(menu.getDish()) {
+		case 0:
+			mainFood = "바지락 칼국수";
+			break;
 		case 1:
-			food = "바지락 칼국수";
+			mainFood = "팥 칼국수";
 			break;
 		case 2:
-			food = "팥 칼국수";
+			mainFood = "들깨 칼국수";
 			break;
 		case 3:
-			food = "들깨 칼국수";
-
-
+			mainFood = "새알팥죽";
+			break;
+		default:
+			System.out.println("잘 못 입력하셨습니다.");
+			break;
 		}
+
 		menu.setSide(Prompt.inputInt("사이드 음식 번호를 입력해주세요\n"
 				+ "5: 해물파전\n"
 				+ "6: 왕만두"));
+
+		String sideFood = null;
+		switch(menu.getDish()) {
+		case 5:
+			sideFood = "바지락 칼국수";
+			break;
+		case 6:
+			sideFood = "팥 칼국수";
+			break;
+		case 2:
+			sideFood = "들깨 칼국수";
+		case 3:
+			sideFood = "새알팥죽";
+		}
 		menu.setBeverage(Prompt.inputInt("음료 번호를 입력해주세요\n"
 				+ "7: 콜라\n"
 				+ "8: 사이다"));
