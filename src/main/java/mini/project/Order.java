@@ -29,6 +29,11 @@ public class Order {
 			System.out.printf("  %d번   %d개\n",orderList.get(i),amountList.get(i));			
 		}
  	}
+	
+	public void change() {
+		System.out.println("[ 메뉴 변경 ]\n");
+		
+	}
 
 	
 
