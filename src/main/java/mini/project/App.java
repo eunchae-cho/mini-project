@@ -5,7 +5,7 @@ package mini.project;
 
 public class App {
 	public String getGreeting() {
-		return "Hello world.";
+		return "반갑습니다";
 	}
 
 	public static void main(String[] args) {
