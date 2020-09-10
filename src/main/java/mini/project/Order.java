@@ -1,7 +1,6 @@
 package mini.project;
 
 import java.util.ArrayList;
-import java.util.Queue;
 
 import mini.project.util.Prompt;
 
@@ -19,10 +18,6 @@ public class Order {
 		table.setPeople(Prompt.inputInt(" - 고객수: "));
 		
 		while (true) {
-			int[] arr = new int[10];
-			for (int i = 0; i < arr.length; i++) {
-				arr[i] = 
-			}
 			table.setOrder(Prompt.inputInt(" - 주문 번호: "));
 			table.setAmount(Prompt.inputInt(" - 수량: "));		
 			String str = Prompt.inputString(" - 주문을 추가하겠습니까?(y/N) ");
@@ -59,9 +54,7 @@ public class Order {
 		}
 		
 		while (true) {
-			 a = Prompt.inputInt(" - 주문 번호: ");
-			queue.offer(a);
-			Prompt.inputInt(" - 주문 번호: ");
+			table.setOrder(Prompt.inputInt(" - 주문 번호: "));
 			table.setNum(Prompt.inputInt(" - 수량: "));
 			
 			String str = Prompt.inputString(" - 계속하시겠습니까?(y/N) ");
