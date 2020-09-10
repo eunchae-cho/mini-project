@@ -1,6 +1,7 @@
 package mini.project;
 
 import java.util.ArrayList;
+import java.util.Queue;
 
 import mini.project.util.Prompt;
 
@@ -10,14 +11,21 @@ public class Order {
 	
 	ArrayList<Table> tableList = new ArrayList<>();
 	ArrayList<Menu> menuNameList = new ArrayList<>();
-
+	int count, count2;
 
 	public void add() {
 		Table table = new Table();
+		table.setNum(Prompt.inputInt(" - 테이블 번호: "));
+		table.setPeople(Prompt.inputInt(" - 고객수: "));
+		
 		while (true) {
+			int[] arr = new int[10];
+			for (int i = 0; i < arr.length; i++) {
+				arr[i] = 
+			}
 			table.setOrder(Prompt.inputInt(" - 주문 번호: "));
 			table.setAmount(Prompt.inputInt(" - 수량: "));		
-			String str = Prompt.inputString(" - 계속하시겠습니까?(y/N) ");
+			String str = Prompt.inputString(" - 주문을 추가하겠습니까?(y/N) ");
 			if (!str.equalsIgnoreCase("y")) {
 				break;
 			}
@@ -29,7 +37,7 @@ public class Order {
 
 	
 	public void list() {
-		System.out.println("[ 주문 목록 ]\n");
+		System.out.println("\n[ 주문 목록 ]");
 		Object[] tables = tableList.toArray();
 		for (Object obj : tables) {
 			Table table = (Table) obj;
@@ -51,8 +59,11 @@ public class Order {
 		}
 		
 		while (true) {
-			table.setOrder(Prompt.inputInt(" - 주문 번호: "));
+			 a = Prompt.inputInt(" - 주문 번호: ");
+			queue.offer(a);
+			Prompt.inputInt(" - 주문 번호: ");
 			table.setNum(Prompt.inputInt(" - 수량: "));
+			
 			String str = Prompt.inputString(" - 계속하시겠습니까?(y/N) ");
 			if (!str.equalsIgnoreCase("y")) {
 				break;

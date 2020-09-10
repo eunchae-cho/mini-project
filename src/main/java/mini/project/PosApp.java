@@ -33,24 +33,23 @@ public class PosApp {
 					System.out.println("=================================");
 					System.out.println("              주문                              ");
 					System.out.println("=================================");
-					table.setNum(Prompt.inputInt(" - 테이블 번호: "));
-					int people = Prompt.inputInt(" - 고객수: ");
 					while (true) {
 						System.out.println("------------------------------");
 						System.out.println("       무엇을 하시겠습니까?\n       ");
-						System.out.println("  (1) 메뉴 등록     (2) 메뉴 변경    ");
-						System.out.println("------------------------------");
+						System.out.println("  (1) 주문 등록     (2) 주문 변경    ");
+						System.out.println("------------------------------");						
 						String ask = Prompt.inputString(" - 번호를 입력해주세요: ");
+						System.out.println();
 						if (ask.equals("1")) {
 							menuList.menuBoard();
 							System.out.println();
 							order.add();
 							order.list();
-							System.out.println("\n메뉴를 등록했습니다.");
+							System.out.println("\n주문을 등록했습니다.");
 							break;
 						} else if (ask.equals("2")) {
 							order.change();
-							System.out.println("\n메뉴를 변경했습니다.");
+							System.out.println("\n주문을 변경했습니다.");
 							break;
 						} else {
 							if (count == 3) {

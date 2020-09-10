@@ -1,9 +1,11 @@
 package mini.project;
 
+
 public class Table {
 	private int num;
 	private int order;
 	private int amount;
+	private int people;
 	
 	public int getNum() {
 		return num;
@@ -22,6 +24,12 @@ public class Table {
 	}
 	public void setAmount(int amount) {
 		this.amount = amount;
+	}
+	public int getPeople() {
+		return people;
+	}
+	public void setPeople(int people) {
+		this.people = people;
 	}
 	
 	
