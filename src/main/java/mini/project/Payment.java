@@ -3,10 +3,10 @@ package mini.project;
 import java.util.ArrayList;
 
 public class Payment {
-	
+
 	ArrayList<Integer> orderList = new ArrayList<>();
 	ArrayList<Integer> amountList = new ArrayList<>();
-	
+
 	public void pay() {
 		System.out.println("[ 계산 ]\n");
 		int filter = 0;
