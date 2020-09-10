@@ -32,7 +32,7 @@ public class PosApp {
 					System.out.println("=================================");
 					System.out.println("              주문                              ");
 					System.out.println("=================================");
-					tableList.tableNum = Prompt.inputInt(" - 테이블 번호: ");
+					//tableList.tableNum = Prompt.inputInt(" - 테이블 번호: ");
 					int people = Prompt.inputInt(" - 고객수: ");
 					while (true) {
 						System.out.println("------------------------------");
