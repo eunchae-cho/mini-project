@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class MenuList {
 	
-	Menu menu = new Menu();
-	//ArrayList menuList = new ArrayList();
+	ArrayList<Menu> menuNameList = new ArrayList<>();
+	ArrayList<Menu> menuNumList = new ArrayList<>();
 	
 	public void menuName() {
 		Menu menu = new Menu();
@@ -21,24 +21,26 @@ public class MenuList {
 		menu.setAlcohol10("맥주");
 		menu.setAlcohol11("막걸리");
 		
-	}
-
-
-	public void menuNum(int value) {
-		switch (value) {
-		case 1: menu.getDish1();break;
-		case 2: menu.getDish2();break;
-		case 3: menu.getDish3();break;
-		case 4: menu.getDish4();break;
-		case 5: menu.getSide5();break;
-		case 6: menu.getSide6();break;
-		case 7: menu.getBeverage7();break;
-		case 8: menu.getBeverage8();break;
-		case 9: menu.getAlcohol9();break;
-		case 10: menu.getAlcohol10();break;
-		case 11: menu.getAlcohol11();break;
+		menuNameList.add(menu);
 		
-		}
+	}
+	
+	public void menuNum() {
+		Menu menu = new Menu();
+		menu.setDish1("1");
+		menu.setDish2("2");
+		menu.setDish3("3");
+		menu.setDish4("4");
+		menu.setSide5("5");
+		menu.setSide6("6");
+		menu.setBeverage7("8");
+		menu.setBeverage8("9");
+		menu.setAlcohol9("10");
+		menu.setAlcohol10("11");
+		menu.setAlcohol11("12");
+		
+		menuNumList.add(menu);
+		
 	}
 	
 
@@ -59,8 +61,5 @@ public class MenuList {
 		
 	}
 	
-	public static void main(String[] args) {
-		Menu m = new Menu();
-		System.out.println(m.getAlcohol10());
-	}
+	
 }

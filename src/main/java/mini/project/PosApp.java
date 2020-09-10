@@ -6,8 +6,9 @@ public class PosApp {
 
 	public static void main(String[] args) {
 		TableList tableList = new TableList();
-		Order order = new Order();
 		MenuList menuList = new MenuList();
+		Order order = new Order();
+		Payment payment = new Payment();
 		int count = 1;
 
 		loop:
@@ -76,7 +77,7 @@ public class PosApp {
 					System.out.println("               계산                              ");
 					System.out.println("=================================");
 
-					order.pay();
+					payment.pay();
 
 					break;
 

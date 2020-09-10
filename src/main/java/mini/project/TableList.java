@@ -9,16 +9,17 @@ public class TableList {
 	int tableNum;
 	
 	
-	public TableList findByNum(int value) {
-	    Object[] tables = tableList.toArray();
-
-	    for (Object obj : tables) {
-	    	
-	      if (value == (int)obj) {
-	        return ;
-	      }
-	    }
-	    return null;
-	  }
+	
+//	private Object[] findByNum(int num) {
+//			Object[] tables = tableList.toArray();
+//		for (int i = 0; i < tableList.size(); i++) {
+//			for (Object obj : tables) {
+//				if (num == (int)obj) {
+//					return tables;
+//					}
+//				}
+//		}
+//		return null;
+//	}
 
 }
