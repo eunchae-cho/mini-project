@@ -1,16 +1,15 @@
-package mini.project;
+package mini.project.Handler;
 
 import java.util.ArrayList;
 
+import mini.project.List.MenuList;
+import mini.project.domain.Table;
 import mini.project.util.Prompt;
 
 public class Order {
 	
 	MenuList menuList = new MenuList();
-	
 	ArrayList<Table> tableList = new ArrayList<>();
-	ArrayList<Menu> menuNameList = new ArrayList<>();
-	int count, count2;
 
 	public void add() {
 		Table table = new Table();
@@ -28,17 +27,18 @@ public class Order {
 		
 		tableList.add(table);
 	}
-
-
 	
+
 	public void list() {
-		System.out.println("\n[ 주문 목록 ]");
+		System.out.println("\n****** 주문 목록 ******");
 		Object[] tables = tableList.toArray();
 		for (Object obj : tables) {
 			Table table = (Table) obj;
 			System.out.printf(" 주문 번호: %d, 수량: %d\n",
 					table.getOrder(),table.getAmount());
 		}
+		System.out.println("\n 주문을 등록했습니다.");
+		System.out.println("*******************");
 	}	
 
 	
@@ -66,7 +66,7 @@ public class Order {
 	}
 	
 	@SuppressWarnings("unused")
-	private Table findByNum(int num) {
+	protected Table findByNum(int num) {
 		for (int i = 0; i < tableList.size(); i++) {
 			Table table = tableList.get(i);
 			if (table.getNum() == num) {
@@ -74,6 +74,11 @@ public class Order {
 			}
 		}
 		return null;
+	}
+	
+	
+	public void pay() {
+		
 	}
 
 }

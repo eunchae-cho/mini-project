@@ -1,6 +1,8 @@
-package mini.project;
+package mini.project.List;
 
 import java.util.ArrayList;
+
+import mini.project.domain.Price;
 
 public class PriceList {
 	

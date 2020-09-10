@@ -1,11 +1,15 @@
 package mini.project;
 
+import mini.project.Handler.Order;
+import mini.project.Handler.Payment;
+import mini.project.List.MenuList;
+import mini.project.domain.Table;
 import mini.project.util.Prompt;
 
 public class PosApp {
 
 	public static void main(String[] args) {
-		TableList tableList = new TableList();
+		
 		MenuList menuList = new MenuList();
 		Table table = new Table();
 		Order order = new Order();
@@ -45,7 +49,6 @@ public class PosApp {
 							System.out.println();
 							order.add();
 							order.list();
-							System.out.println("\n주문을 등록했습니다.");
 							break;
 						} else if (ask.equals("2")) {
 							order.change();
@@ -69,9 +72,7 @@ public class PosApp {
 					System.out.println("=================================");
 					System.out.println("               계산                              ");
 					System.out.println("=================================");
-
 					payment.pay();
-
 					break;
 
 				default: 
