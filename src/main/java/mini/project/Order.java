@@ -5,31 +5,30 @@ import java.util.ArrayList;
 import mini.project.util.Prompt;
 
 public class Order {
-
-	MenuList menuList = new MenuList();
-	TableList tableList = new TableList();
 	
-	ArrayList<Integer> orderList = new ArrayList<>();
-	ArrayList<Integer> amountList = new ArrayList<>();
+	MenuList menuList = new MenuList();
+	
+	ArrayList<Table> tableList = new ArrayList<>();
 	ArrayList<Menu> menuNameList = new ArrayList<>();
 
 
 	public void add() {
-		orderList.add(Prompt.inputInt(" - 주문 번호: "));
-		amountList.add(Prompt.inputInt(" - 수량: "));
+		Table table = new Table();
+		table.setOrder(Prompt.inputInt(" - 주문 번호: "));
+		table.setAmount(Prompt.inputInt(" - 수량: "));
 		
-		
+		tableList.add(table);
 	}
 
 
-	// 안바꾼거
+	
 	public void list() {
 		System.out.println("[ 주문 목록 ]\n");
-		System.out.println("| 주문 번호  |  수량   |");
-		for(int i = 0; i < orderList.size(); i++) {
-			System.out.printf(" %d번     %d개  \n",
-					orderList.get(i),
-					amountList.get(i));			
+		Object[] tables = tableList.toArray();
+		for (Object obj : tables) {
+			Table table = (Table) obj;
+			System.out.printf(" 주문 번호: %d, 수량: %d\n",
+					table.getOrder(),table.getAmount());
 		}
 	}	
 
@@ -37,8 +36,18 @@ public class Order {
 
 	public void change() {
 		System.out.println("[ 메뉴 변경 ]\n");
-		tableList.tableNum = Prompt.inputInt(" - 변경할 테이블 번호: ");
-		
+		int num = Prompt.inputInt("변경할 테이블 번호: ");
+		Table table = findBynum(num);
+	}
+	
+	private Table findByNum(int num) {
+		for (int i = 0; i < tableList.size(); i++) {
+			Table table = tableList.get(i);
+			if (table.getNum() == num) {
+				return table;
+			}
+		}
+		return null;
 	}
 
 
