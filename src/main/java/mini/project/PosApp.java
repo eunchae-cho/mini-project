@@ -7,6 +7,7 @@ public class PosApp {
 	public static void main(String[] args) {
 		TableList tableList = new TableList();
 		MenuList menuList = new MenuList();
+		Table table = new Table();
 		Order order = new Order();
 		Payment payment = new Payment();
 		int count = 1;
@@ -32,7 +33,7 @@ public class PosApp {
 					System.out.println("=================================");
 					System.out.println("              주문                              ");
 					System.out.println("=================================");
-					tableList.tableNum = Prompt.inputInt(" - 테이블 번호: ");
+					table.setNum(Prompt.inputInt(" - 테이블 번호: "));
 					int people = Prompt.inputInt(" - 고객수: ");
 					while (true) {
 						System.out.println("------------------------------");
@@ -43,18 +44,12 @@ public class PosApp {
 						if (ask.equals("1")) {
 							menuList.menuBoard();
 							System.out.println();
-							while (true) {
-								order.add();
-								String str = Prompt.inputString(" - 계속하시겠습니까?(y/N) ");
-								if (!str.equalsIgnoreCase("y")) {
-									break;
-								}
-							}
+							order.add();
 							order.list();
 							System.out.println("\n메뉴를 등록했습니다.");
-
 							break;
 						} else if (ask.equals("2")) {
+							order.change();
 							System.out.println("\n메뉴를 변경했습니다.");
 							break;
 						} else {
