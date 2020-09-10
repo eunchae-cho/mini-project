@@ -44,8 +44,7 @@ public class PosApp {
 							menuList.menuBoard();
 							System.out.println();
 							while (true) {
-								order.addMenu();
-								order.addAmount();
+								order.add();
 								String str = Prompt.inputString(" - 계속하시겠습니까?(y/N) ");
 								if (!str.equalsIgnoreCase("y")) {
 									break;
